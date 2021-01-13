@@ -10,19 +10,20 @@
 
 > Online Store with Laravel 6 by Artmedia
 
-### 🏠 [Homepage](artmediatmojo.com)
+### 🏠 [Homepage](https://artmediatmojo.com/)
 
 ## Install
 
 ```sh
+composer install
 npm install
 ```
 
 ## Author
 
-👤 **Artmedia**
+👤 **Dedyk Suntoro Atmojo**
 
-* Website: artmediatmojo.com
+* Website: https://artmediatmojo.com/
 * Twitter: [@dedyksuntoro](https://twitter.com/dedyksuntoro)
 * Github: [@dedyksuntoro](https://github.com/dedyksuntoro)
 * LinkedIn: [@dedyk-suntoro-atmojo-252a15117](https://linkedin.com/in/dedyk-suntoro-atmojo-252a15117)
