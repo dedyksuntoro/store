@@ -25,14 +25,8 @@
 	<section class="cart_area">
 		<div class="container">
 			<div class="cart_inner">
-        
-        <!-- DISABLE BAGIAN INI JIKA INGIN MELIHAT HASILNYA TERLEBIH DAHULU -->
-        <!-- KARENA MODULENYA AKAN DIKERJAKAN PADA SUB BAB SELANJUTNYA -->
-        <!-- HANYA SAJA DEMI KEMUDAHAN PENULISAN MAKA SAYA MASUKKAN PADA BAGIAN INI -->
                 <form action="{{ route('front.update_cart') }}" method="post">
                     @csrf
-        <!-- DISABLE BAGIAN INI JIKA INGIN MELIHAT HASILNYA TERLEBIH DAHULU -->
-                  
 				<div class="table-responsive">
 					<table class="table">
 						<thead>
@@ -44,7 +38,6 @@
 							</tr>
 						</thead>
 						<tbody>
-              <!-- LOOPING DATA DARI VARIABLE CARTS -->
                             @forelse ($carts as $row)
 							<tr>
 								<td>
@@ -62,14 +55,8 @@
 								</td>
 								<td>
 									<div class="product_count">
-                    
-                    
-                    <!-- PERHATIKAN BAGIAN INI, NAMENYA KITA GUNAKAN ARRAY AGAR BISA MENYIMPAN LEBIH DARI 1 DATA -->
                                         <input type="text" name="qty[]" id="sst{{ $row['product_id'] }}" maxlength="12" value="{{ $row['qty'] }}" title="Quantity:" class="input-text qty">
                                         <input type="hidden" name="product_id[]" value="{{ $row['product_id'] }}" class="form-control">
-                    <!-- PERHATIKAN BAGIAN INI, NAMENYA KITA GUNAKAN ARRAY AGAR BISA MENYIMPAN LEBIH DARI 1 DATA -->
-                    
-                    
 										<button onclick="var result = document.getElementById('sst{{ $row['product_id'] }}'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 										 class="increase items-count" type="button">
 											<i class="lnr lnr-chevron-up"></i>
@@ -159,7 +146,7 @@
 								<td>
 									<div class="checkout_btn_inner">
 										<a class="gray_btn" href="{{ route('front.product') }}">Continue Shopping</a>
-                                        <a class="main_btn" href="{{ route('front.checkout') }}">Proceed to checkout</a>
+										<a class="main_btn" href="{{ route('front.checkout') }}">Proceed to checkout</a>
 									</div>
 								</td>
 							</tr>
