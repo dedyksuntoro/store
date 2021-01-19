@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-    
+
     @yield('title')
-    
+
 	<link rel="stylesheet" href="{{ asset('ecommerce/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('ecommerce/vendors/linericon/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('ecommerce/css/font-awesome.min.css') }}">
@@ -16,9 +16,23 @@
 	<link rel="stylesheet" href="{{ asset('ecommerce/vendors/nice-select/css/nice-select.css') }}">
 	<link rel="stylesheet" href="{{ asset('ecommerce/vendors/animate-css/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('ecommerce/vendors/jquery-ui/jquery-ui.css') }}">
-	
+
 	<link rel="stylesheet" href="{{ asset('ecommerce/css/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('ecommerce/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('ecommerce/css/responsive.css') }}">
+    <style>
+        .menu-sidebar-area {
+          list-style-type:none; padding-left: 0; font-size: 15pt;
+        }
+        .menu-sidebar-area > li {
+          margin:0 0 10px 0;
+          list-style-position:inside;
+          border-bottom: 1px solid black;
+        }
+        .menu-sidebar-area > li > a {
+          color: black
+        }
+      </style>
+      @yield('css')
 </head>
 
 <body>
@@ -100,7 +114,7 @@
 	<!--================Header Menu Area =================-->
 
     @yield('content')
-    
+
     <!--================ Subscription Area ================-->
 	<section class="subscription-area section_gap">
         <div class="container">
@@ -215,8 +229,8 @@
 			</div>
 			<div class="row footer-bottom d-flex justify-content-between align-items-center">
 				<p class="col-lg-12 footer-text text-center">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
-                    All rights reserved | This template is made with 
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with
                     <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://daengweb.id" target="_blank">Daengweb</a>
 				</p>
 			</div>
